@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>phonegap & jquery mobile boilerplate</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+
+  <link rel="stylesheet"  href="css/jquery.mobile.structure.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.theme.css" />
+  
+  <script>
+    var userAgent = navigator.userAgent + '';
+    if (userAgent.indexOf('iPhone') > -1) {
+      document.write('<script src="js/lib/cordova-iphone.js"></sc' + 'ript>');
+      var mobile_system = 'iphone';
+    } else if (userAgent.indexOf('Android') > -1) {
+      document.write('<script src="js/lib/cordova-android.js"></sc' + 'ript>');
+      var mobile_system = 'android';
+    } else {
+      var mobile_system = '';
+    }
+  </script>
+  
+  <script src="js/lib/jquery.js"></script>
+  <!-- your scripts here -->
+  <script type="text/javascript" charset="utf-8" src="cordova-2.4.0.js"></script>
+    <script src="js/app/camera.js"></script>
+
+
+  <script src="js/app/app.js"></script>
+  <script src="js/app/bootstrap.js"></script>
+  <script src="js/lib/jquery.mobile.js"></script>
+
+
+    <style type="text/css">
+    .ui-content {
+      background-color: #33ace0 }
+    #hero{
+      background-color: #FFFFFF;
+      padding: 15px;
+      margin-bottom: 20px;
+      -moz-border-radius: 15px;
+      border-radius: 15px;
+      overflow: hidden;
+      
+
+    }
+
+    img.center {   display: block;   margin-left: auto;   margin-right: auto; }
+
+    </style>
+  </head>
+  <body>
+    
+ <div data-role="page">
+
+  <div data-role="header">
+    <h1>
+      VitalClik Patient Demo
+    </h1>
+  </div><!-- /header -->
+
+
+
+  <div data-role="content"> 
+  
+    <div id="hero">
+      <img src="./img/logo.png" width="250px"  class="center">
+
+      <center><h3> Today is:
+        <script type="text/javascript">
+        var currentTime = new Date()
+        var month = currentTime.getMonth() + 1
+        var day = currentTime.getDate()
+        var year = currentTime.getFullYear()
+        document.write(month + "/" + day + "/" + year)
+      </script>
+
+
+      </h3></center>
+    <div>
+      <img src="http://www.brockmans.org/wp-content/uploads/2010/07/Asleep-Check-Mark-Icon-Sleep-Aid-Records.jpg " style= "float: left; padding-right: 15px;" width="100px" >
+      <div>Welcome Mr. John Doe</div>
+      <div>Please fill in today's information</div>
+      <div><b>Your Status is OK</b></div>
+<br></br>
+<br></br>
+
+
+    </div>
+    <div>
+    <ul data-role="listview" data-filter="true">
+      <li> <a href="./index3.html" data-transition="slideup">Tracker <p class="ui-li-desc" style= "margin-top: 10px;"> Track your daily metrics!</p></a> </li>
+      <li> <a href="#">History <p class="ui-li-desc" style= "margin-top: 10px;"> Keep a log of your metrics</p></a> </li>
+
+      <li> <a href="#">Settings <p class="ui-li-desc" style= "margin-top: 10px;"> Change preferences and user details</p></a> </li>
+
+      <li> About </li>
+      <li><a href="./foo.html" data-transition="slideup"> <img src="http://a.dryicons.com/images/icon_sets/stickers_icon_set/png/128x128/camera.png" class="ui-li-thumb">Surgical Site Photo</a></li>
+    </ul>
+    </div>
+
+
+    </div>
+
+    
+  </div><!-- /content -->
+
+</div><!-- /page -->
+
+
+    
+  </body>
+</html>
